@@ -1,0 +1,9 @@
+{
+  "name": "@repo/core",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "peerDependencies": {
+    "react": "^19.2.0",
+    "react-native": "*"
+  }
+}

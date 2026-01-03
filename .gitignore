@@ -1,0 +1,99 @@
+# Node
+node_modules/
+
+# PNPM
+.pnpm/
+.pnpm-store/
+
+# Next.js
+.next/
+.next/**
+out/
+
+# Expo / React Native
+.expo/
+.expo-shared/
+.expo-shared/**
+*.expo
+.android/
+.android/**
+.ios/
+.ios/**
+android/
+android/**
+ios/
+ios/**
+ios/Pods/
+ios/Podfile.lock
+android/.gradle/
+android/app/build/
+android/app/*.keystore
+
+# Metro / cache artifacts
+.rncache
+.expo/metro-cache
+
+# Build / output
+dist/
+build/
+coverage/
+public/build/
+
+# TypeScript
+*.tsbuildinfo
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Editor directories and files
+.vscode/
+.idea/
+.DS_Store
+*.sublime-workspace
+*.sublime-project
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+
+# macOS
+.DS_Store
+
+# JetBrains
+*.iml
+
+# Misc files
+*.log
+package-lock.json
+yarn.lock
+
+# Visual Studio Code Workspace settings
+.vscode/*
+.vscode/**
+
+# EAS/credentials files (optional)
+/eas.json
+/credentials/*.json
+
+# Storybook / other tool caches
+.storybook-static/
+
+# Local dev files
+.local
+
+# Tamagui generated / static sync cache
+.tamagui/*
+
+# Misc caches
+.cache/
+"""
