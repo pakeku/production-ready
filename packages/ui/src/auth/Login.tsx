@@ -39,7 +39,7 @@ export function Login({ onSuccess, title = "Login" }: LoginProps) {
   }
 
   return (
-    <YStack gap={12} width="100%" maxW={400}>
+    <YStack gap={12} width="100%" style={{ maxWidth: 400 }}>
       <Text fontSize={24} fontWeight="600">
         {title}
       </Text>
