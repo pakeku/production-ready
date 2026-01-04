@@ -3,7 +3,15 @@ import { YStack } from "tamagui";
 
 export function ScreenCenter({ children }: { children?: ReactNode }) {
   return (
-    <YStack flex={1} alignItems="center" justifyContent="center" width="100%" minHeight="100vh">
+    <YStack
+      flex={1}
+      style={{
+        alignItems: "center",
+        justifyContent: "center",
+        width: "100%",
+        minHeight: "100vh",
+      }}
+    >
       {children}
     </YStack>
   );
