@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { YStack, XStack, Input, Text } from "tamagui";
 import { Button } from "../button/Button";
 import { useAuth } from "@repo/core";
+import { SwitchTheme } from "@repo/ui";
 
 export type LoginProps = {
   onSuccess?: (user: { id: string; email: string }) => void;
@@ -32,7 +33,7 @@ export function Login({ onSuccess, title = "Login" }: LoginProps) {
 
   if (user) {
     return (
-      <YStack space>
+      <YStack gap={12} width="100%" style={{ maxWidth: 400 }}>
         <Text>{`Login success — Hi ${user?.email}`}</Text>
       </YStack>
     );
@@ -40,6 +41,7 @@ export function Login({ onSuccess, title = "Login" }: LoginProps) {
 
   return (
     <YStack gap={12} width="100%" style={{ maxWidth: 400 }}>
+      <SwitchTheme />
       <Text fontSize={24} fontWeight="600">
         {title}
       </Text>
