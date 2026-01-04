@@ -1,0 +1,24 @@
+{
+  "name": "www",
+  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "next dev --webpack",
+    "build": "next build --webpack",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "16.0.5",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "@repo/ui": "workspace:*",
+    "@repo/core": "workspace:*",
+    "@repo/utils": "workspace:*",
+    "tamagui": "^1.98.0",
+    "react-native-web": "^0.21.2",
+    "react-native-svg": "^15.15.0"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.7"
+  }
+}

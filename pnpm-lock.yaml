@@ -138,6 +138,40 @@ importers:
         specifier: 19.2.7
         version: 19.2.7
 
+  apps/www:
+    dependencies:
+      '@repo/core':
+        specifier: workspace:*
+        version: link:../../packages/core
+      '@repo/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      '@repo/utils':
+        specifier: workspace:*
+        version: link:../../packages/utils
+      next:
+        specifier: 16.0.5
+        version: 16.0.5(@babel/core@7.28.5)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+      react:
+        specifier: 19.2.0
+        version: 19.2.0
+      react-dom:
+        specifier: 19.2.0
+        version: 19.2.0(react@19.2.0)
+      react-native-svg:
+        specifier: ^15.15.0
+        version: 15.15.0(react-native@0.81.4(@babel/core@7.28.5)(@types/react@19.2.7)(react@19.2.0))(react@19.2.0)
+      react-native-web:
+        specifier: ^0.21.2
+        version: 0.21.2(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+      tamagui:
+        specifier: ^1.98.0
+        version: 1.138.5(react-dom@19.2.0(react@19.2.0))(react-native@0.81.4(@babel/core@7.28.5)(@types/react@19.2.7)(react@19.2.0))(react@19.2.0)
+    devDependencies:
+      '@types/react':
+        specifier: 19.2.7
+        version: 19.2.7
+
   packages/core:
     dependencies:
       react:

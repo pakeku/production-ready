@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import { XStack, YStack, Text } from "tamagui";
+import { XStack, YStack, Text, useTheme } from "tamagui";
 
 export type CodeProps = {
   children: ReactNode;
@@ -16,6 +16,17 @@ export function Code({
   maxHeight = "400px",
   variant = "block",
 }: CodeProps) {
+  const theme = useTheme();
+  
+  // Theme-aware colors
+  const isDark = theme.background.val === "#000000" || theme.background.val === "#1a1a1a";
+  const codeBackground = isDark ? "#1a1a1a" : "#f5f5f5";
+  const codeBorder = isDark ? "#333" : "#e0e0e0";
+  const codeText = isDark ? "#e0e0e0" : "#1a1a1a";
+  const codeLineNumber = isDark ? "#666" : "#999";
+  const codeLabel = isDark ? "#999" : "#666";
+  const inlineBg = isDark ? "#2a2a2a" : "#f0f0f0";
+
   if (variant === "inline") {
     return (
       <Text
@@ -23,10 +34,11 @@ export function Code({
         style={{
           whiteSpace: "nowrap",
           fontFamily: "monospace",
-          backgroundColor: "#f0f0f0",
+          backgroundColor: inlineBg,
           paddingHorizontal: 8,
           paddingVertical: 4,
           borderRadius: 4,
+          color: codeText,
         }}
       >
         {children}
@@ -41,12 +53,12 @@ export function Code({
     <YStack
       background="$gray2"
       borderWidth={1}
-      style={{ borderColor: "#ddd", overflowY: "auto", maxHeight, borderRadius: 12 }}
+      style={{ borderColor: codeBorder, overflowY: "auto", maxHeight, borderRadius: 12, backgroundColor: codeBackground }}
       overflow="hidden"
     >
       <YStack p="$3" gap="$2">
         <XStack gap="$2" mb="$2">
-          <Text fontSize="$2" fontWeight="bold" style={{ color: "#666" }}>
+          <Text fontSize="$2" fontWeight="bold" style={{ color: codeLabel }}>
             {language}
           </Text>
         </XStack>
@@ -60,7 +72,7 @@ export function Code({
                     minWidth: 30,
                     textAlign: "right",
                     fontFamily: "monospace",
-                    color: "#999",
+                    color: codeLineNumber,
                   }}
                 >
                   {index + 1}
@@ -70,7 +82,7 @@ export function Code({
                 fontSize="$2"
                 style={{
                   fontFamily: "monospace",
-                  color: "#333",
+                  color: codeText,
                   whiteSpace: "pre-wrap",
                 }}
               >
