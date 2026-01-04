@@ -9,7 +9,8 @@
     "dev:storybook": "turbo run dev --filter=@repo/storybook",
     "build": "turbo run build",
     "lint": "turbo run lint",
-    "test": "turbo run test"
+    "test": "turbo run test",
+    "refresh-node_modules": "sh ./scripts/refresh-node_modules.sh"
   },
   "devDependencies": {
     "turbo": "^2.0.0",
