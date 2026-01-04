@@ -4,3 +4,5 @@ export * from "./button/Button";
 export * from "./center/ScreenCenter";
 export * from "./auth/Login";
 export * from "./switch/Switch";
+export * from './typography/Typography';
+export * from "./code/Code";
