@@ -5,13 +5,16 @@
   },
   "build": {
     "base": {
-      "node": "20.18.0",
-      "pnpm": "10.24.0"
+      "node": "20.11.0",
+      "pnpm": "9.15.0"
     },
     "development": {
       "extends": "base",
       "developmentClient": true,
       "distribution": "internal",
+      "env": {
+        "EXPO_MONOREPO_ROOT": "../.."
+      },
       "ios": {
         "simulator": true
       },
@@ -22,6 +25,9 @@
     "preview": {
       "extends": "base",
       "distribution": "internal",
+      "env": {
+        "EXPO_MONOREPO_ROOT": "../.."
+      },
       "ios": {
         "simulator": false
       },
@@ -32,6 +38,9 @@
     "production": {
       "extends": "base",
       "distribution": "store",
+      "env": {
+        "EXPO_MONOREPO_ROOT": "../.."
+      },
       "ios": {
         "simulator": false
       },
