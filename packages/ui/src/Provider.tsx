@@ -1,6 +1,6 @@
 "use client";
 
-import React, { ReactNode, createContext, useContext } from "react";
+import React, { ReactNode, createContext, useContext, useEffect } from "react";
 import { TamaguiProvider, Theme } from "tamagui";
 import config from "../tamagui.config";
 import { Switch } from "./switch/Switch";
@@ -32,8 +32,26 @@ export function SwitchTheme() {
   );
 }
 
+function getSystemTheme(): "light" | "dark" {
+  if (typeof window === "undefined") return "light";
+  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+}
+
 export function UiProvider({ children }: { children: ReactNode }) {
   const [theme, setTheme] = React.useState<"light" | "dark">("light");
+
+  // Initialize with system theme and listen for changes
+  useEffect(() => {
+    setTheme(getSystemTheme());
+
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    const handleChange = (e: MediaQueryListEvent) => {
+      setTheme(e.matches ? "dark" : "light");
+    };
+
+    mediaQuery.addEventListener("change", handleChange);
+    return () => mediaQuery.removeEventListener("change", handleChange);
+  }, []);
   
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>

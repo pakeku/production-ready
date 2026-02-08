@@ -4,7 +4,7 @@ import Animated, {
   useAnimatedStyle,
   withTiming,
 } from "react-native-reanimated";
-import { SwitchTheme, useTheme } from "@repo/ui";
+import { useTheme } from "@repo/ui";
 
 export type SidebarProps = {
   isOpen: boolean;
@@ -116,10 +116,6 @@ export function Sidebar({
           {/* Bottom Section */}
           <View style={[styles.separator, { backgroundColor: colors.border }]} />
           <View style={styles.bottomSection}>
-            <View style={styles.themeRow}>
-              <Text style={[styles.themeLabel, { color: colors.subtle }]}>Dark Mode</Text>
-              <SwitchTheme />
-            </View>
             <TouchableOpacity
               style={styles.menuItem}
               onPress={() => {

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { View, Text, ScrollView, TouchableOpacity, StyleSheet } from "react-native";
-import { Switch, SwitchTheme, useTheme } from "@repo/ui";
+import { Switch, useTheme } from "@repo/ui";
 
 type SettingItem = {
   icon: string;
@@ -66,9 +66,9 @@ export function SettingsScreen() {
   const appSettings: SettingItem[] = [
     {
       icon: "🌙",
-      label: "Dark Mode",
-      description: `Currently: ${theme === "dark" ? "Dark" : "Light"}`,
-      type: "theme",
+      label: "Theme",
+      description: `Using system theme (${theme === "dark" ? "Dark" : "Light"})`,
+      type: "link",
     },
     {
       icon: "📍",
@@ -105,7 +105,7 @@ export function SettingsScreen() {
       {item.type === "toggle" && (
         <Switch checked={item.value} onCheckedChange={() => toggleSetting(key as keyof typeof settings)} />
       )}
-      {item.type === "theme" && <SwitchTheme />}
+
       {item.type === "link" && <Text style={[styles.chevron, { color: colors.subtle }]}>›</Text>}
     </View>
   );

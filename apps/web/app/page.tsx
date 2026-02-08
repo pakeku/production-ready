@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, useTheme, SwitchTheme } from "@repo/ui";
+import { Button, useTheme } from "@repo/ui";
 
 export default function Page() {
   const { theme } = useTheme();
@@ -105,7 +105,6 @@ export default function Page() {
           <a href="/dashboard" style={{ color: colors.subtle, fontSize: 14, cursor: "pointer", textDecoration: "none" }}>Login</a>
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-          <SwitchTheme />
           <a href="/contact" className="nav-cta" style={{ display: "block", textDecoration: "none" }}><Button variant="primary" size="sm">Get Started</Button></a>
           <div className="mobile-cta" style={{ display: "none", alignItems: "center", gap: 16 }}>
             <a href="/dashboard" style={{ color: colors.subtle, fontSize: 14, textDecoration: "none" }}>Login</a>
