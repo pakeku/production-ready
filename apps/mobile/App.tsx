@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { View, StyleSheet } from "react-native";
 import { UiProvider } from "@repo/ui";
-import { Header, TabBar, Sidebar } from "./components";
+import { Header, TabBar, Sidebar, FAB, AIAssistant } from "./components";
 import {
   HomeScreen,
   ServiceScreen,
@@ -54,6 +54,7 @@ export default function App() {
   const [activeTab, setActiveTab] = useState<TabKey>("home");
   const [activeScreen, setActiveScreen] = useState<ScreenKey>("home");
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [aiAssistantOpen, setAiAssistantOpen] = useState(false);
   const [notificationCount] = useState(3);
 
   const handleTabPress = (key: string) => {
@@ -98,6 +99,13 @@ export default function App() {
           userName="John Doe"
           userEmail="john.doe@example.com"
           onNavigate={handleSidebarNavigate}
+        />
+
+        <FAB onPress={() => setAiAssistantOpen(true)} />
+
+        <AIAssistant
+          visible={aiAssistantOpen}
+          onClose={() => setAiAssistantOpen(false)}
         />
       </View>
     </UiProvider>
