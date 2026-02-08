@@ -1,9 +1,49 @@
 {
   "expo": {
-    "name": "mobile",
-    "slug": "mobile",
+    "name": "Self-Service",
+    "slug": "self-service",
     "version": "1.0.0",
-    "platforms": ["ios", "android", "web"],
-    "entryPoint": "./App.tsx"
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#6750A4"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.selfservice.mobile",
+      "buildNumber": "1",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#6750A4"
+      },
+      "package": "com.selfservice.mobile",
+      "versionCode": 1
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "entryPoint": "./App.tsx",
+    "extra": {
+      "eas": {
+        "projectId": "546365b4-4443-4da3-925f-9168c5fa42a1"
+      }
+    },
+    "owner": "itcat"
   }
 }
