@@ -1,0 +1,26 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "paths": {
+      "@repo/ui/*": ["../../packages/ui/src/*"],
+      "@repo/core/*": ["../../packages/core/src/*"],
+      "@repo/utils/*": ["../../packages/utils/src/*"],
+      "@repo/ui": ["../../packages/ui/src"],
+      "@repo/core": ["../../packages/core/src"],
+      "@repo/utils": ["../../packages/utils/src"]
+    },
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "noEmit": true,
+    "incremental": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": ["**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
+}

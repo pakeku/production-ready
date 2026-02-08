@@ -3,16 +3,14 @@ import { UiProvider } from "@repo/ui";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Self-Service | Smart Hospitality Software",
-  description:
-    "Transform your hotel guest experience with Self-Service. Mobile check-in, room service, amenities booking, and local exploration - all in one app.",
-  keywords: "hotel software, hospitality, guest experience, mobile check-in, room service app",
+  title: "Self-Service Dashboard | Hotel Management",
+  description: "Manage your hotel operations with the Self-Service admin dashboard.",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body>
+      <body style={{ margin: 0 }}>
         <UiProvider>{children}</UiProvider>
       </body>
     </html>
