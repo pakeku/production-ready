@@ -6,8 +6,9 @@ const workspaceRoot = path.resolve(__dirname, '..', '..');
 
 const config = getDefaultConfig(projectRoot);
 
-// Include monorepo root and packages to watch and resolve modules from
+// Include monorepo root and packages to watch, preserving Expo defaults
 config.watchFolders = [
+  ...(config.watchFolders || []),
   workspaceRoot,
   path.resolve(workspaceRoot, 'packages'),
 ];
