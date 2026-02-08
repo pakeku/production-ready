@@ -8,6 +8,7 @@
     "dev:mobile": "turbo run dev --filter=mobile",
     "dev:storybook": "turbo run dev --filter=@repo/storybook",
     "build": "turbo run build",
+    "build:mobile": "turbo run build --filter=mobile",
     "lint": "turbo run lint",
     "typecheck": "turbo run typecheck",
     "test": "pnpm test:unit && pnpm test:e2e",

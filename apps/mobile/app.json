@@ -38,7 +38,6 @@
     "runtimeVersion": {
       "policy": "appVersion"
     },
-    "entryPoint": "./App.tsx",
     "extra": {
       "eas": {
         "projectId": "546365b4-4443-4da3-925f-9168c5fa42a1"

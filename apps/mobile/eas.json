@@ -12,6 +12,9 @@
       "extends": "base",
       "developmentClient": true,
       "distribution": "internal",
+      "env": {
+        "EXPO_MONOREPO_ROOT": "../.."
+      },
       "ios": {
         "simulator": true
       },
@@ -22,6 +25,9 @@
     "preview": {
       "extends": "base",
       "distribution": "internal",
+      "env": {
+        "EXPO_MONOREPO_ROOT": "../.."
+      },
       "ios": {
         "simulator": false
       },
@@ -32,6 +38,9 @@
     "production": {
       "extends": "base",
       "distribution": "store",
+      "env": {
+        "EXPO_MONOREPO_ROOT": "../.."
+      },
       "ios": {
         "simulator": false
       },
