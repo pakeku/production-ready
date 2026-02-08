@@ -99,4 +99,9 @@ yarn.lock
 
 # Misc caches
 .cache/
-"""
+
+# Testing
+coverage/
+.coverage/
+playwright-report/
+test-results/

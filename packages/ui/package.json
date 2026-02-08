@@ -4,6 +4,10 @@
   "main": "src/index.ts",
   "types": "src/index.ts",
   "sideEffects": false,
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src/"
+  },
   "dependencies": {
     "tamagui": "^1.98.0",
     "@tamagui/config": "1.138.5"
