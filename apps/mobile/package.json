@@ -23,7 +23,8 @@
     "submit:android": "npx eas-cli submit --platform android",
     "update": "npx eas-cli update",
     "update:preview": "npx eas-cli update --branch preview",
-    "update:production": "npx eas-cli update --branch production"
+    "update:production": "npx eas-cli update --branch production",
+    "export:web": "npx expo export --platform web"
   },
   "dependencies": {
     "@repo/core": "workspace:*",
